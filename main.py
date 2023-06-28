@@ -1,6 +1,7 @@
 from time import sleep
 import requests
 
+#def set_bulb(bulb_url):
 def grab_bridge():
     # Access the JSON data
     url = "https://discovery.meethue.com/"

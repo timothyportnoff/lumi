@@ -174,3 +174,7 @@ if __name__ == "__main__":
     except requests.RequestException as e:
         print("An error occurred during the request:", str(e))
 
+    except KeyboardInterrupt:
+        # Code to execute when Ctrl+C is pressed
+        print("Ctrl+C detected. Exiting...")
+

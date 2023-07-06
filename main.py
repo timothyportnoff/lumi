@@ -137,10 +137,6 @@ if __name__ == "__main__":
             print()  # Print a blank line for readability
 
         print("Exiting Program.")
-    except requests.exceptions.RequestException as e:
-        print("Reached exception block in clip post")
-        print("An error occurred during the request:", str(e))
-    
     except json.JSONDecodeError as e:
         print("Error parsing JSON response:", str(e))
     

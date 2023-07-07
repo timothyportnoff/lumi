@@ -34,14 +34,16 @@ def grab_bridge():
     # for option in menu_options:
     #     print(option)
 
+    # print("Lumi Options:")
+    # print("1. Authenticate user.")
+    # print("2. Print user authentication")
+    # print("3. Print all light info")
+    # print("4. Turn on light")
+    # print("5. Turn off light")
+    # print("0. Quit")
+
 def print_menu():
-    print("Lumi Options:")
-    print("1. Authenticate user.")
-    print("2. Print user authentication")
-    print("3. Print all light info")
-    print("4. Turn on light")
-    print("5. Turn off light")
-    print("0. Quit")
+    pass
 
 def get_user_choice():
     while True:

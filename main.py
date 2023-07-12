@@ -27,23 +27,22 @@ def grab_bridge():
         }
         return bridge_data
 
-menu_options = ["Lumi Options:",
-                "1. Authenticate user.",
+menu_options = [ "1. Authenticate user.",
                 "2. Print user authentication",
                 "3. Print all light info",
                 "4. Turn on light",
                 "5. Turn off light",
                 "0. Quit"]
 
-
 def print_menu():
+    print("Lumi Options:")
     for option in menu_options:
-        print(option)
+        print("\t" + option)
 
 def get_user_choice():
     while True:
         choice = input("Enter your choice (1-5): ")
-        if choice.isdigit() and 0 <= int(choice) <= 5:
+        if choice.isdigit() and 0 <= int(choice) < len(menu_options):
             return int(choice)
         else:
             print("Invalid input. Please enter a valid choice.")

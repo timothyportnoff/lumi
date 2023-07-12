@@ -7,15 +7,13 @@ api_key = ''
 client_key= ''
 
 def grab_bridge():
-    # Access the JSON data
     url = "https://discovery.meethue.com/"
     response = requests.get(url)
     data = response.json()
 
-    # Example: Print the first bridge's ID
-    if len(data) == 0: 
+    if len(data) <= 0: 
         print("No bridges found.")
-    else:#if len(data) > 0: 
+    else:
         first_bridge = data[0]
         bridge_id = first_bridge["id"]
         bridge_ip = first_bridge["internalipaddress"]
@@ -29,21 +27,18 @@ def grab_bridge():
         }
         return bridge_data
 
-#This will become the options menu, where we can determine length and all. 
-#menu_options = ['apple','orange','banana']
-    # for option in menu_options:
-    #     print(option)
+menu_options = ["Lumi Options:",
+                "1. Authenticate user.",
+                "2. Print user authentication",
+                "3. Print all light info",
+                "4. Turn on light",
+                "5. Turn off light",
+                "0. Quit"]
 
-    # print("Lumi Options:")
-    # print("1. Authenticate user.")
-    # print("2. Print user authentication")
-    # print("3. Print all light info")
-    # print("4. Turn on light")
-    # print("5. Turn off light")
-    # print("0. Quit")
 
 def print_menu():
-    pass
+    for option in menu_options:
+        print(option)
 
 def get_user_choice():
     while True:
